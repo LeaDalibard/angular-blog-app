@@ -1,4 +1,6 @@
-<li class="list-group-item">
+<li [ngClass]="{'list-group-item': true,
+                'list-group-item-success': postLoveIts > postHateIts,
+                'list-group-item-danger': postLoveIts < postHateIts}">
   <span class="pull-right">{{postCreatedAt | date :'short' }}</span>
   <h2>{{postTitle}}</h2>
   <p>{{postContent}}</p>
