@@ -1,4 +1,4 @@
-import { Component,Input,OnInit } from '@angular/core';
+import {Component, Input, OnInit} from '@angular/core';
 
 @Component({
   selector: 'app-post-list-component',
@@ -13,9 +13,17 @@ export class PostListComponentComponent implements OnInit {
   @Input() postHateIts: number;
   @Input() postCreatedAt: Date;
 
-  constructor() { }
+  constructor() {
+  }
 
   ngOnInit(): void {
   }
 
+  onClickLoveIt(): void {
+    this.postLoveIts++;
+  }
+
+  onClickHateIt(): void {
+    this.postHateIts++;
+  }
 }

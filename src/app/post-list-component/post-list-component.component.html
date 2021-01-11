@@ -1,7 +1,7 @@
 <li class="list-group-item">
+  <span class="pull-right">{{postCreatedAt | date :'short' }}</span>
   <h2>{{postTitle}}</h2>
-  <span>{{postCreatedAt | date}}</span>
   <p>{{postContent}}</p>
-  <button type="button" class="btn btn-success m-1">Love it : {{postLoveIts}}</button>
-  <button type="button" class="btn btn-danger m-1">Don't like it : {{postHateIts}}</button>
+  <button type="button" class="btn btn-success m-1" (click)="onClickLoveIt()">Love it : {{postLoveIts}}</button>
+  <button type="button" class="btn btn-danger m-1" (click)="onClickHateIt()">Don't like it : {{postHateIts}}</button>
 </li>
