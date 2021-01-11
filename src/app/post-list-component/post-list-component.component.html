@@ -1,5 +1,7 @@
-<h2> Title</h2>
-<p>Content</p>
-<span>Date</span>
-<button>Love it</button>
-<button>Don't love it</button>
+<li class="list-group-item">
+  <h2>{{postTitle}}</h2>
+  <span>{{postCreatedAt | date}}</span>
+  <p>{{postContent}}</p>
+  <button type="button" class="btn btn-success m-1">Love it : {{postLoveIts}}</button>
+  <button type="button" class="btn btn-danger m-1">Don't like it : {{postHateIts}}</button>
+</li>
