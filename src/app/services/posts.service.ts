@@ -10,6 +10,13 @@ export class PostsService {
   }
 
   emitPosts() {
-    this.postsSubject.next(this.posts);
+    this.postsSubject.next(this.posts.slice());
   }
+
+  addPost(post: Post) {
+    this.posts.push(post);
+    this.emitPosts();
+  }
+
+
 }
