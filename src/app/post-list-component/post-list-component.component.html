@@ -1,9 +1,20 @@
-<li [ngClass]="{'list-group-item': true,
-                'list-group-item-success': postLoveIts > postHateIts,
-                'list-group-item-danger': postLoveIts < postHateIts}">
-  <span class="pull-right">{{postCreatedAt | date :'short' }}</span>
-  <h2>{{postTitle}}</h2>
-  <p>{{postContent}}</p>
-  <button type="button" class="btn btn-success m-1" (click)="onClickLoveIt()">Love it : {{postLoveIts}}</button>
-  <button type="button" class="btn btn-danger m-1" (click)="onClickHateIt()">Don't like it : {{postHateIts}}</button>
-</li>
+
+<div class="row">
+  <div class="col-xs-12">
+    <h1>Posts</h1>
+    <div class="list-group">
+      <li [ngClass]="{'list-group-item': true,
+                'list-group-item-success': post.LoveIts > post.HateIts,
+                'list-group-item-danger': post.LoveIts < post.HateIts}" *ngFor="let post of posts">
+        <span class="pull-right">{{post.createdAt | date :'short' }}</span>
+        <h2>{{post.title}}</h2>
+        <p>{{post.content}}</p>
+        <button type="button" class="btn btn-success m-1" (click)="onClickLoveIt()">Love it : {{post.LoveIts}}</button>
+        <button type="button" class="btn btn-danger m-1" (click)="onClickHateIt()">Don't like it
+          : {{post.HateIts}}</button>
+        <button type="button" class="btn btn-danger m-1 pull-right" (click)="onClickDeletePost(post)">Delete</button>
+      </li>
+
+    </div>
+  </div>
+</div>

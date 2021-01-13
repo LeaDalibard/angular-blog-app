@@ -4,6 +4,7 @@ import {Subject} from 'rxjs';
 export class PostsService {
 
   posts: Post[] = [];
+
   postsSubject = new Subject<Post[]>();
 
   constructor() {
@@ -20,13 +21,13 @@ export class PostsService {
 
   deletePost(post: Post) {
     const postIndexToRemove = this.posts.findIndex(
-      (postEl)=>{
-        if(postEl === post){
+      (postEl) => {
+        if (postEl === post) {
           return true;
         }
       }
     );
-    this.posts.splice(postIndexToRemove,1);
+    this.posts.splice(postIndexToRemove, 1);
     this.emitPosts();
   }
 
