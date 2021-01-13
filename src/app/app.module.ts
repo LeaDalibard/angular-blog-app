@@ -3,6 +3,7 @@ import { NgModule } from '@angular/core';
 
 import { AppComponent } from './app.component';
 import { PostListComponentComponent } from './post-list-component/post-list-component.component';
+import {PostsService} from './services/posts.service';
 
 @NgModule({
   declarations: [
@@ -12,7 +13,7 @@ import { PostListComponentComponent } from './post-list-component/post-list-comp
   imports: [
     BrowserModule
   ],
-  providers: [],
+  providers: [PostsService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
