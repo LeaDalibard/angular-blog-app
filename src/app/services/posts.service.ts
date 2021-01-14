@@ -31,33 +31,19 @@ export class PostsService {
     this.emitPosts();
   }
 
-  loveIt(post: Post) {
-    const postIndexToLove = this.posts.findIndex(
-      (postEl) => {
-        if (postEl === post) {
-          return true;
-        }
-      }
-    );
+  loveIt(i: number) {
     const posts = this.posts;
-    const postLoved = posts[postIndexToLove];
+    const postLoved = posts[i];
     postLoved.loveIts++;
-    this.posts[postIndexToLove] = postLoved;
+    this.posts[i] = postLoved;
     this.emitPosts();
   }
 
-  hateIt(post: Post) {
-    const postIndexToHate = this.posts.findIndex(
-      (postEl) => {
-        if (postEl === post) {
-          return true;
-        }
-      }
-    );
+  hateIt(i: number) {
     const posts = this.posts;
-    const postHated = posts[postIndexToHate];
+    const postHated = posts[i];
     postHated.hateIts++;
-    this.posts[postIndexToHate] = postHated;
+    this.posts[i] = postHated;
     this.emitPosts();
   }
 

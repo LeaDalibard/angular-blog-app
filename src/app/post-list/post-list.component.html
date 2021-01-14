@@ -4,12 +4,12 @@
     <div class="list-group">
       <li [ngClass]="{'list-group-item': true,
                 'list-group-item-success': post.loveIts > post.hateIts,
-                'list-group-item-danger': post.loveIts < post.hateIts}" *ngFor="let post of posts">
+                'list-group-item-danger': post.loveIts < post.hateIts}" *ngFor="let post of posts; let i = index">
         <span class="pull-right">{{post.createdAt | date :'short' }}</span>
         <h2>{{post.title}}</h2>
         <p>{{post.content}}</p>
-        <button type="button" class="btn btn-success m-1" (click)="onClickLoveIt(post)">Love it : {{post.loveIts}}</button>
-        <button type="button" class="btn btn-danger m-1" (click)="onClickHateIt(post)">Don't like it
+        <button type="button" class="btn btn-success m-1" (click)="onClickLoveIt(i)">Love it : {{post.loveIts}}</button>
+        <button type="button" class="btn btn-danger m-1" (click)="onClickHateIt(i)">Don't like it
           : {{post.hateIts}}</button>
         <button type="button" class="btn btn-danger m-1 pull-right" (click)="onClickDeletePost(post)">Delete</button>
       </li>
