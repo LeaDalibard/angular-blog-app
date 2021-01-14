@@ -1,28 +1,20 @@
-# AngularBlogApp
+# Angular Blog App
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 11.0.6.
+- Type of Challenge: `Learning challenge`
 
-## Development server
+Following this tutorial : [openclassrooms.com](https://openclassrooms.com/fr/courses/4668271-developpez-des-applications-web-avec-angular/6730866-entrainez-vous-a-implementer-lajout-des-posts-dans-votre-blog)
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+## Learning objectives
 
-## Code scaffolding
+- Use Angular services and components
+- Generate Routing with Angular using `routerLink` and `router-outlet`
+- Implement Observavbles Angular using  `subscribe()`,  `unsubscribe()`,  `ngOnInit()` and  `ngOnDestroy()`
+- Create a Reactive Form with `formGroup` and `formControlName`
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
 
-## Build
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
+## The mission
 
-## Running unit tests
+Make an angular blog App where you make post, add like/unlike functions and delete
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
-# angular-blog-app
+[https://LeaDalibard.github.io/angular-blog-app](https://LeaDalibard.github.io/angular-blog-app)
