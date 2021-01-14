@@ -16,7 +16,6 @@ export class PostListComponentComponent implements OnInit {
 //   @Input() postHateIts: number;
 //   @Input() postCreatedAt: Date;
 
-
   posts: Post[];
   postsSubscription: Subscription;
 
@@ -33,12 +32,12 @@ export class PostListComponentComponent implements OnInit {
   }
 
 
-  onClickLoveIt(): void {
-    this.postLoveIts++;
+  onClickLoveIt(post: Post): void {
+    post.loveIts++;
   }
 
-  onClickHateIt(): void {
-    this.postHateIts++;
+  onClickHateIt(post: Post): void {
+    post.hateIts++;
   }
 
   onClickDeletePost(post: Post): void {
