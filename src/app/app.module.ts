@@ -12,7 +12,7 @@ import {RouterModule, Routes} from '@angular/router';
 const appRoutes: Routes = [
   { path: 'posts', component: PostListComponent },
   {path: 'new', component: NewPostComponent},
-  {path: '', component: AppComponent}
+  {path: '', component: PostListComponent}
 ];
 
 @NgModule({
