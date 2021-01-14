@@ -3,8 +3,7 @@ import {Subject} from 'rxjs';
 
 export class PostsService {
 
-  posts: Post[] = [];
-
+  private posts: Post[] = [];
   postsSubject = new Subject<Post[]>();
 
   constructor() {
