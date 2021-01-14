@@ -30,8 +30,8 @@ export class NewPostComponent implements OnInit {
   onSavePost() {
     const title = this.postForm.get('title').value;
     const content = this.postForm.get('content').value;
-    const newPost = new Post(title, content);
-    newPost.createdAt = new Date();
+    const createdAt = new Date();
+    const newPost = new Post(title, content, createdAt);
     newPost.hateIts = 0;
     newPost.loveIts = 0;
     this.postsServices.addPost(newPost);
