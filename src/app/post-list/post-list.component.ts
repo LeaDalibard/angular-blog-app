@@ -33,11 +33,11 @@ export class PostListComponent implements OnInit {
 
 
   onClickLoveIt(post: Post): void {
-    post.loveIts++;
+    this.postsService.loveIt(post);
   }
 
   onClickHateIt(post: Post): void {
-    post.hateIts++;
+    this.postsService.hateIt(post);
   }
 
   onClickDeletePost(post: Post): void {
